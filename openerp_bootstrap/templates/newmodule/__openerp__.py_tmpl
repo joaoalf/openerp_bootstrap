@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+${copyright}
+
 {
     'name': '${module_name}',
     'version': '${version}',
@@ -9,9 +11,20 @@
     'website': '${website}',
     'license': 'AGPL-3',
     'depends': ${depends},
-    'init_xml': [],
-    'update_xml': [],
-    'demo_xml': [],
+    'data': ['+package+_data.xml', 
+    #if $has_report
+             '+package+_report.xml',
+    #end if
+    #if $has_wizard
+             '+package+_wizard.xml',
+    #end if
+    #if $has_workflow
+             '+package+_workflow.xml',
+    #end if
+            ],
+    #if $has_demo
+    'demo': ['+package+_demo.xml'],
+    #end if
     'active': False,
     'installable': True,
     #if $is_web

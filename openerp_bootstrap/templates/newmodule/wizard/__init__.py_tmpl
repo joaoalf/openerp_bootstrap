@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+
+${copyright}
+
+#if $has_report
+import report
+#end if
+#if $has_wizard
+import wizard
+#end if
+#if $has_workflow
+import workflow
+#end if
