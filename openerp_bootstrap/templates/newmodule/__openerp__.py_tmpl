@@ -11,19 +11,19 @@ ${copyright}
     'website': '${website}',
     'license': 'AGPL-3',
     'depends': ${depends},
-    'data': ['+package+_data.xml', 
+    'data': ['${package}_data.xml', 
     #if $has_report
-             '+package+_report.xml',
+             '${package}_report.xml',
     #end if
     #if $has_wizard
-             '+package+_wizard.xml',
+             '${package}_wizard.xml',
     #end if
     #if $has_workflow
-             '+package+_workflow.xml',
+             '${package}_workflow.xml',
     #end if
             ],
     #if $has_demo
-    'demo': ['+package+_demo.xml'],
+    'demo': ['${package}_demo.xml'],
     #end if
     'active': False,
     'installable': True,
