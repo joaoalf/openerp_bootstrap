@@ -22,7 +22,7 @@ class NewModule(templates.Template):
         var('author_email', 'Author email'),
         var('category', 'Category'),
         var('website', 'Website'),
-        var('license', 'License'),
+        var('license', 'License', default="AGPLv3"),
         var('depends', 'Dependencies [space-separated module names]',
             default=''),
         var('is_web', 'Is web addon? [yes/no]', default='no'),
